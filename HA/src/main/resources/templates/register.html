@@ -1,17 +1,50 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.24/vue.min.js"></script>
 </head>
 <body>
-<form action="/user/addUser" th:object="${ user }">
-    用户名：<input type="text" name="userName">
-    密 码： <input type="password" name="password">
-    年 龄： <input type="text" name="age">
-    <input type="submit" value="注册">
+<nav  class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="container">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
+                <li><a href="/user/info">User</a></li>
+            </ul>
+            <div class="collapse navbar-collapse" >
+                <ul class="nav navbar-nav">
+                    <li><a href="/user/info">Sign In</a>
+                    <li><a href="/user/info">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+</nav>
+<form  th:object="${ user }" class="container" th:action="@{/user/addUser}">
+    <div class="form-group row">
+     <label  class="col-sm-1 col-form-label">Email</label>
+        <input type="text" name="Email">
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-1 col-form-label">name</label>
+        <input type="text" name="userName">
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-1 col-form-label">age</label>
+         <input type="text" name="age">
+    </div>
+    <div class="form-group row">
+     <label class="col-sm-1 col-form-label">Password</label>
+        <div class="col-sm-2">
+           <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Password">
+        </div>
+    </div>
+  <input type="submit" value="注册" class="btn btn-primary" >
 </form>
-
 </body>
 </html>
