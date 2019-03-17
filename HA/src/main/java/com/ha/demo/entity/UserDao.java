@@ -1,5 +1,7 @@
 package com.ha.demo.entity;
 
+import java.util.List;
+
 public interface UserDao {
     int deleteByPrimaryKey(Integer id);
 
@@ -8,6 +10,7 @@ public interface UserDao {
     int insertSelective(User record);
 
     User selectByPrimaryKey(Integer id);
+    List<User> selectAll();
 
     int updateByPrimaryKeySelective(User record);
 
