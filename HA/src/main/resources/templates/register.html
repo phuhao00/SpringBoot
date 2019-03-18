@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.24/vue.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
 </head>
 <body>
 <nav  class="navbar navbar-inverse">
@@ -46,5 +46,24 @@
     </div>
   <input type="submit" value="注册" class="btn btn-primary" >
 </form>
+<div id="app">
+    {{ message }}
+    <h1>{{details()}}</h1>
+</div>
 </body>
+<script  th:inline="javascript">
+    var  user =[[${user}]];
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            message:user.userName
+        },
+        methods: {
+            details: function() {
+                return  user.age
+            }
+        }
+    })
+
+</script>
 </html>
