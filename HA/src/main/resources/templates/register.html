@@ -9,15 +9,15 @@
 <body>
 <nav  class="navbar navbar-inverse">
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav navbar-left">
                 <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
                 <li><a href="/user/info">User</a></li>
             </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="navbar-text"><a href="/user/info"  class="nav-link" >Sign In</a>
+                <li class="navbar-text "><a href="/user/info"  class="nav-link" >Sign Up</a></li>
+            </ul>
         </div>
-    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-        <li class="nav-item"><a href="/user/info"  class="nav-link" >Sign In</a>
-        <li class="nav-item"><a href="/user/info"  class="nav-link" >Sign Up</a></li>
-    </ul>
 </nav>
 
 <form  th:object="${ user }" class="container" th:action="@{/user/addUser}">
