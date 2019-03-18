@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 @Controller
 @RequestMapping("/user")
@@ -29,5 +30,11 @@ public class UserController {
         User userTmp=new User(user.getUserName(),user.getPassword(),user.getAge());
         boolean b = this.userService.addUser(userTmp);
        return  b;
+    }
+    @RequestMapping("/allUser")
+    public String getAllUser(HttpServletRequest request, Model model){
+        List<User> userList=this.userService.allUser();
+        model.addAttribute("userList",userList);
+        return "allUser";
     }
 }

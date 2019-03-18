@@ -5,6 +5,8 @@ import com.ha.demo.entity.UserDao;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
+
 @Service("userService")
 public class UserService implements com.ha.demo.service.UserService {
     @Resource
@@ -23,5 +25,9 @@ public class UserService implements com.ha.demo.service.UserService {
             e.printStackTrace();
         }
         return result;
+    }
+    @Override
+    public List<User> allUser(){
+       return userDao.selectAll();
     }
 }
