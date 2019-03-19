@@ -1,176 +1,102 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A set of horizontal menus that switch to vertical
-    and which hide at small window widths.">
-    <title>Responsive Horizontal-to-Vertical Menu &ndash; Layout Examples &ndash; Pure</title>
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+    <title>HA</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .fakeimg {
+            height: 200px;
+            background: #aaa;
+        }
+    </style>
 </head>
 <body>
-<!--[if lte IE 8]>
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
-<![endif]-->
-<!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
-<!--<![endif]-->
+<div class="jumbotron text-center" style="margin-bottom:0">
+    <h2>PassionDesert</h2>
+</div>
 
-<style>
-.custom-wrapper {
-    background-color: #ffd390;
-    margin-bottom: 1em;
-    -webkit-font-smoothing: antialiased;
-    height: 2.1em;
-    overflow: hidden;
-    -webkit-transition: height 0.5s;
-    -moz-transition: height 0.5s;
-    -ms-transition: height 0.5s;
-    transition: height 0.5s;
-}
-
-.custom-wrapper.open {
-    height: 14em;
-}
-
-.custom-menu-3 {
-    text-align: right;
-}
-
-.custom-toggle {
-    width: 34px;
-    height: 34px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: none;
-}
-
-.custom-toggle .bar {
-    background-color: #777;
-    display: block;
-    width: 20px;
-    height: 2px;
-    border-radius: 100px;
-    position: absolute;
-    top: 18px;
-    right: 7px;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    transition: all 0.5s;
-}
-
-.custom-toggle .bar:first-child {
-    -webkit-transform: translateY(-6px);
-    -moz-transform: translateY(-6px);
-    -ms-transform: translateY(-6px);
-    transform: translateY(-6px);
-}
-
-.custom-toggle.x .bar {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-.custom-toggle.x .bar:first-child {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-}
-
-@media (max-width: 47.999em) {
-
-    .custom-menu-3 {
-        text-align: left;
-    }
-
-    .custom-toggle {
-        display: block;
-    }
-
-}
-</style>
-<div class="custom-wrapper pure-g" id="menu">
-    <div class="pure-u-1 pure-u-md-1-3">
-        <div class="pure-menu">
-            <a href="#" class="pure-menu-heading custom-brand">Brand</a>
-            <a href="#" class="custom-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">PassionDesert</a>
         </div>
-    </div>
-    <div class="pure-u-1 pure-u-md-1-3">
-        <div class="pure-menu pure-menu-horizontal custom-can-transform">
-            <ul class="pure-menu-list">
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">首页</a></li>
+                <li><a href="#">排行榜</a></li>
+                <li><a href="#">安利墙</a></li>
+                <li><a href="#">发现</a></li>
+                <li><a href="#">论坛</a></li>
+                <li><a href="#">视频</a></li>
             </ul>
         </div>
     </div>
-    <div class="pure-u-1 pure-u-md-1-3">
-        <div class="pure-menu pure-menu-horizontal custom-menu-3 custom-can-transform">
-            <ul class="pure-menu-list">
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Yahoo</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">W3C</a></li>
+</nav>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm-8">
+            <div class="fakeimg">
+                图像
+            </div>
+            <p></p>
+            <div class="fakeimg">图像</div>
+        </div>
+        <div class="col-sm-2">
+            <h2>HA</h2>
+            <h5>HA:发现好游戏</h5>
+            <div class="social-spread-wechat"><img src="https://img.tapimg.com/market/images/c4bf2701e3ee9993e1ee0b8222480a35.jpg" alt=""></div>
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#">QQ</a></li>
+                <li><a href="#">微信</a></li>
+                <li><a href="#">知乎</a></li>
             </ul>
+            <hr class="hidden-sm hidden-md hidden-lg">
         </div>
     </div>
 </div>
-<script>
-(function (window, document) {
-var menu = document.getElementById('menu'),
-    WINDOW_CHANGE_EVENT = ('onorientationchange' in window) ? 'orientationchange':'resize';
 
-function toggleHorizontal() {
-    [].forEach.call(
-        document.getElementById('menu').querySelectorAll('.custom-can-transform'),
-        function(el){
-            el.classList.toggle('pure-menu-horizontal');
-        }
-    );
-};
-
-function toggleMenu() {
-    // set timeout so that the panel has a chance to roll up
-    // before the menu switches states
-    if (menu.classList.contains('open')) {
-        setTimeout(toggleHorizontal, 500);
-    }
-    else {
-        toggleHorizontal();
-    }
-    menu.classList.toggle('open');
-    document.getElementById('toggle').classList.toggle('x');
-};
-
-function closeMenu() {
-    if (menu.classList.contains('open')) {
-        toggleMenu();
-    }
-}
-
-document.getElementById('toggle').addEventListener('click', function (e) {
-    toggleMenu();
-    e.preventDefault();
-});
-
-window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
-})(this, this.document);
-
-</script>
-
-<style>
-.main {
-    padding: 2em;
-    color: black;
-}
-</style>
-
-<div class="main">
-    <h1>Responsive Horizontal-to-Vertical Menu</h1>
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <span>
+      <span>Copyright © 2019 <a href="https://www.taptap.com">HA</a>. All rights Reserved.</span>
+           <br>
+              <span>适龄提示: 本公司产品适合 10 周岁以上玩家使用</span>
+               <span>&nbsp;<a href="https://www.taptap.com/taptapjh" target="_blank" rel="nofollow">未成年人家长监护</a>&nbsp;&nbsp;                            <a href="https://www.taptap.com/privacy-policy" rel="nofollow">隐私权政策</a>&nbsp;&nbsp;
+               <a href="https://www.taptap.com/copyright" rel="nofollow">侵权投诉</a>                         </span>
+           <br>
+           <span>
+                <a href="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow">沪ICP备16012525号-1</a>&nbsp;&nbsp;
+                 <a href="/license/www.html">沪网文(2016)2204-116号&nbsp;&nbsp;</a>
+            </span>
+             <br>
+            <span class="manage">经营许可证编号: 沪B2-20170322</span>易玩（上海）网络科技有限公司
+               <br>
+            <span>公司地址: 上海市静安区万荣路 700 号 A3 202</span>
+             <br>
+             <span class="record-filing">
+		 	<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402003255">
+             <img src="https://img.tapimg.com/market/images/d0289dc0a46fc5b15b3363ffa78cf6c7.png">
+                  <p>
+                    沪公网安备 31010402003255号
+                 </p>
+             </a>
+		 	<a target="_blank" href="http://sq.ccm.gov.cn:80/ccnt/sczr/service/business/emark/toDetail/35EE6340BAC97151E0530140A8C0E25A">
+                <img src="https://img.tapimg.com/market/images/d839a60d8749eca93b9ca669583e65f4.png">
+                  <p>
+                      互联网文化经营单位
+                   </p>
+             </a>
+		 	</span>
+      </span>
 </div>
 </body>
 </html>

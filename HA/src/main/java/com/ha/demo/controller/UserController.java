@@ -17,7 +17,7 @@ import java.util.List;
 public class UserController {
     @Resource
     private UserService userService;
-    @RequestMapping("/showUser")
+    @RequestMapping("/info")
     public String toIndex(HttpServletRequest request, Model model){
         int userId = Integer.parseInt(request.getParameter("id"));
         User user = this.userService.getUserById(userId);
