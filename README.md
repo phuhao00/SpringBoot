@@ -1,8 +1,9 @@
-# springBootThymeleafMybatis
-springBoot+Thymeleaf+Mybatis 学习，可以跑起
+# SpringBoot + Thymeleaf + Mybatis + Mysql + Redis 
 
-数据库：mysql
+##可以跑起
 
-Goal：spring Cloud 
+Goal：微服务 , Spring Cloud , hadoop 大数据 , 人工智能 , Docker
 
-产品目标：1.游戏GM;2.游戏分发平台
+## 目标：
+         ### 1.游戏GM后台;
+         ### 2.游戏分发平台
